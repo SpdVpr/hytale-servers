@@ -27,6 +27,23 @@ const nextConfig: NextConfig = {
   experimental: {
     optimizeCss: true,
   },
+
+  // Redirects for SEO - non-www to www
+  async redirects() {
+    return [
+      {
+        source: '/:path*',
+        has: [
+          {
+            type: 'host',
+            value: 'hytaletop.fun',
+          },
+        ],
+        destination: 'https://www.hytaletop.fun/:path*',
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;
