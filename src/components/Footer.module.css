@@ -1,0 +1,151 @@
+/* Footer.module.css - Hytale Adventure Theme */
+
+.footer {
+    margin-top: auto;
+    background: var(--surface-100);
+    border-top: 1px solid var(--surface-200);
+}
+
+@media (prefers-color-scheme: dark) {
+    .footer {
+        background: var(--surface-900);
+        border-color: var(--surface-800);
+    }
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: var(--spacing-3xl) var(--spacing-lg) var(--spacing-xl);
+}
+
+/* Grid Layout */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-xl);
+}
+
+@media (min-width: 640px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .grid {
+        grid-template-columns: 2fr 1fr 1fr 1fr;
+    }
+}
+
+/* Brand Section */
+.brand {
+    max-width: 320px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    text-decoration: none;
+    margin-bottom: var(--spacing-md);
+}
+
+.logoImage {
+    height: 50px;
+    width: auto;
+    max-width: 280px;
+    object-fit: contain;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+.brandDescription {
+    font-size: 0.875rem;
+    color: var(--surface-500);
+    line-height: 1.6;
+}
+
+/* Links Section */
+.linksSection {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.linkTitle {
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: var(--foreground);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.linkList {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.link {
+    font-size: 0.9375rem;
+    color: var(--surface-500);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+.link:hover {
+    color: var(--primary-500);
+}
+
+/* Bottom Bar */
+.bottom {
+    margin-top: var(--spacing-2xl);
+    padding-top: var(--spacing-xl);
+    border-top: 1px solid var(--surface-200);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-sm);
+    text-align: center;
+}
+
+@media (prefers-color-scheme: dark) {
+    .bottom {
+        border-color: var(--surface-800);
+    }
+}
+
+@media (min-width: 768px) {
+    .bottom {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+    }
+}
+
+.copyright {
+    font-size: 0.875rem;
+    color: var(--surface-400);
+}
+
+.disclaimer {
+    font-size: 0.75rem;
+    color: var(--surface-400);
+}
+
+.legalLinks {
+    display: flex;
+    gap: var(--spacing-md);
+}
+
+.legalLink {
+    font-size: 0.875rem;
+    color: var(--surface-500);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+.legalLink:hover {
+    color: var(--primary-500);
+}

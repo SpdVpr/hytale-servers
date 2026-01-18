@@ -1,0 +1,185 @@
+.container {
+    background: var(--background-card);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-lg);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-lg);
+}
+
+.header h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-100);
+}
+
+.legend {
+    display: flex;
+    gap: var(--spacing-md);
+}
+
+.legendItem {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    font-size: 0.75rem;
+    color: var(--text-400);
+}
+
+.uptimeDot {
+    width: 10px;
+    height: 10px;
+    border-radius: 2px;
+    background: var(--gradient-primary);
+}
+
+.playersDot {
+    width: 10px;
+    height: 10px;
+    border-radius: 2px;
+    background: rgba(59, 130, 246, 0.8);
+}
+
+.chart {
+    display: flex;
+    gap: var(--spacing-sm);
+    height: 150px;
+}
+
+.yAxis {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 0.65rem;
+    color: var(--text-500);
+    padding-bottom: 20px;
+    min-width: 30px;
+}
+
+.bars {
+    display: flex;
+    flex: 1;
+    gap: 2px;
+    align-items: flex-end;
+    padding-bottom: 20px;
+    position: relative;
+}
+
+.bars::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    border-top: 1px dashed var(--glass-border);
+}
+
+.barWrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+
+.barContainer {
+    flex: 1;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 1px;
+    position: relative;
+}
+
+.bar {
+    width: 100%;
+    max-width: 20px;
+    min-height: 2px;
+    border-radius: 2px 2px 0 0;
+    transition: all 0.3s ease;
+    position: relative;
+    cursor: pointer;
+}
+
+.bar:hover {
+    transform: scaleY(1.05);
+}
+
+.bar:hover .tooltip {
+    opacity: 1;
+    visibility: visible;
+}
+
+.uptimeBar {
+    background: var(--gradient-primary);
+}
+
+.playersBar {
+    background: rgba(59, 130, 246, 0.8);
+    width: 40%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.tooltip {
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--background-elevated);
+    padding: 4px 8px;
+    border-radius: var(--radius-sm);
+    font-size: 0.7rem;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.2s ease;
+    z-index: 10;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.xLabel {
+    font-size: 0.6rem;
+    color: var(--text-500);
+    margin-top: 4px;
+    white-space: nowrap;
+}
+
+/* Hide some labels on small screens */
+@media (max-width: 768px) {
+    .barWrapper:nth-child(odd) .xLabel {
+        visibility: hidden;
+    }
+}
+
+.stats {
+    display: flex;
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-lg);
+    padding-top: var(--spacing-lg);
+    border-top: 1px solid var(--glass-border);
+}
+
+.stat {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.statValue {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-100);
+}
+
+.statLabel {
+    font-size: 0.75rem;
+    color: var(--text-400);
+}

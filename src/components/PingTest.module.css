@@ -1,0 +1,689 @@
+/* ===================================
+   PingTest Component Styles
+   🎯 EXCLUSIVE FEATURE - Real-time latency testing
+   Make this STAND OUT as our unique differentiator!
+   =================================== */
+
+.container {
+    position: relative;
+    background: linear-gradient(135deg, rgba(0, 200, 255, 0.08), rgba(139, 92, 246, 0.08));
+    border: 2px solid rgba(0, 200, 255, 0.3);
+    border-radius: 20px;
+    padding: 1.75rem;
+    backdrop-filter: blur(12px);
+    transition: all 0.4s ease;
+    overflow: hidden;
+}
+
+.container::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: conic-gradient(from 0deg, transparent, rgba(0, 200, 255, 0.1), transparent 30%);
+    animation: rotate 8s linear infinite;
+    z-index: 0;
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.container.hasResult {
+    border-color: var(--ping-color, rgba(0, 200, 255, 0.3));
+    box-shadow: 0 0 30px rgba(0, 200, 255, 0.15);
+}
+
+.container.pulse {
+    animation: containerPulse 0.6s ease;
+}
+
+@keyframes containerPulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.02);
+    }
+}
+
+/* Unique Feature Badge - Make it POP! */
+.uniqueBadge {
+    position: absolute;
+    top: -1px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.4rem 0.9rem;
+    background: linear-gradient(135deg, #8b5cf6, #06b6d4);
+    color: white;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-radius: 0 0 10px 10px;
+    z-index: 10;
+    box-shadow: 0 4px 15px rgba(139, 92, 246, 0.4);
+}
+
+.uniqueBadge svg {
+    animation: sparkle 2s ease-in-out infinite;
+}
+
+@keyframes sparkle {
+
+    0%,
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.7;
+        transform: scale(1.2);
+    }
+}
+
+/* Header */
+.header {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 1.5rem;
+    margin-top: 0.5rem;
+}
+
+.titleRow {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.iconWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(135deg, rgba(0, 200, 255, 0.2), rgba(139, 92, 246, 0.2));
+    border: 1px solid rgba(0, 200, 255, 0.3);
+    border-radius: 14px;
+}
+
+.icon {
+    color: #00c8ff;
+    filter: drop-shadow(0 0 8px rgba(0, 200, 255, 0.5));
+}
+
+.titleGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+}
+
+.title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: 0;
+    background: linear-gradient(135deg, #00c8ff, #8b5cf6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.subtitle {
+    font-size: 0.85rem;
+    color: var(--text-tertiary);
+    margin: 0;
+}
+
+.location {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    background: rgba(255, 255, 255, 0.05);
+    padding: 0.35rem 0.75rem;
+    border-radius: 20px;
+}
+
+.location svg {
+    color: var(--primary);
+}
+
+/* Error State */
+.error {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(239, 68, 68, 0.15);
+    border: 1px solid rgba(239, 68, 68, 0.3);
+    border-radius: 10px;
+    padding: 0.75rem 1rem;
+    margin-bottom: 1rem;
+    color: #fca5a5;
+    font-size: 0.9rem;
+}
+
+.retryButton {
+    padding: 0.35rem 0.75rem;
+    background: rgba(239, 68, 68, 0.2);
+    border: 1px solid rgba(239, 68, 68, 0.4);
+    border-radius: 6px;
+    color: #fca5a5;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.retryButton:hover {
+    background: rgba(239, 68, 68, 0.3);
+}
+
+/* Pinging Animation */
+.pinging {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 0;
+}
+
+.pingAnimation {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pingRing {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 3px solid #00c8ff;
+    border-radius: 50%;
+    opacity: 0;
+    animation: pingRing 2s ease-out infinite;
+}
+
+.pingRing:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.pingRing:nth-child(3) {
+    animation-delay: 0.8s;
+}
+
+@keyframes pingRing {
+    0% {
+        transform: scale(0.3);
+        opacity: 0.9;
+    }
+
+    100% {
+        transform: scale(1.5);
+        opacity: 0;
+    }
+}
+
+.spinnerLarge {
+    color: #00c8ff;
+    animation: spin 1s linear infinite;
+    filter: drop-shadow(0 0 10px rgba(0, 200, 255, 0.5));
+}
+
+.spinner {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.pingText {
+    margin-top: 1.5rem;
+    color: var(--text-secondary);
+    font-size: 1rem;
+    text-align: center;
+    font-weight: 500;
+}
+
+/* Result Display - THE STAR OF THE SHOW */
+.result {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+.latencyDisplay {
+    position: relative;
+    display: flex;
+    align-items: baseline;
+    gap: 0.35rem;
+    animation: fadeInScale 0.4s ease;
+}
+
+.latencyGlow {
+    position: absolute;
+    inset: -20px;
+    background: radial-gradient(circle, var(--ping-color, #00c8ff), transparent 70%);
+    opacity: 0.2;
+    filter: blur(20px);
+    z-index: -1;
+}
+
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.7);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.latencyValue {
+    font-size: 5rem;
+    font-weight: 800;
+    color: var(--ping-color, #00c8ff);
+    text-shadow: 0 0 40px var(--ping-color, #00c8ff);
+    line-height: 1;
+    font-family: 'JetBrains Mono', monospace;
+}
+
+.latencyUnit {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
+/* Rating Badge - Bigger & Bolder */
+.ratingBadge {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    border: 2px solid;
+    animation: fadeInScale 0.4s ease 0.1s both;
+}
+
+.ratingEmoji {
+    font-size: 1.3rem;
+}
+
+.ratingLabel {
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Location Badge */
+.locationBadge {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    animation: fadeInScale 0.4s ease 0.2s both;
+}
+
+.locationBadge svg {
+    color: #8b5cf6;
+}
+
+/* Breakdown */
+.breakdown {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 14px;
+    padding: 1rem 1.5rem;
+    width: 100%;
+    max-width: 320px;
+    animation: fadeInScale 0.4s ease 0.3s both;
+}
+
+.breakdownItem {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.breakdownLabel {
+    color: var(--text-tertiary);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+
+.breakdownValue {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--text);
+    font-family: 'JetBrains Mono', monospace;
+}
+
+.breakdownDivider {
+    font-size: 1.25rem;
+    color: var(--text-tertiary);
+    font-weight: 600;
+}
+
+/* Retest Button */
+.retestButton {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background: linear-gradient(135deg, rgba(0, 200, 255, 0.15), rgba(139, 92, 246, 0.15));
+    border: 1px solid rgba(0, 200, 255, 0.3);
+    border-radius: 12px;
+    color: #00c8ff;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    animation: fadeInScale 0.4s ease 0.4s both;
+}
+
+.retestButton:hover {
+    background: linear-gradient(135deg, rgba(0, 200, 255, 0.25), rgba(139, 92, 246, 0.25));
+    border-color: rgba(0, 200, 255, 0.5);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(0, 200, 255, 0.2);
+}
+
+.retestButton svg {
+    transition: transform 0.4s ease;
+}
+
+.retestButton:hover svg {
+    transform: rotate(180deg);
+}
+
+/* Initial State */
+.initial {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 2rem 0;
+}
+
+.initialIcon {
+    color: #00c8ff;
+    opacity: 0.5;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 0.5;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.8;
+        transform: scale(1.1);
+    }
+}
+
+.description {
+    color: var(--text-secondary);
+    text-align: center;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+}
+
+.startButton {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 2rem;
+    background: linear-gradient(135deg, #00c8ff, #8b5cf6);
+    border: none;
+    border-radius: 14px;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(0, 200, 255, 0.35);
+}
+
+.startButton:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 30px rgba(0, 200, 255, 0.45);
+}
+
+.startButton svg {
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.loadingDots {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.loadingDots span {
+    width: 8px;
+    height: 8px;
+    background: #00c8ff;
+    border-radius: 50%;
+    animation: loadingDot 1.4s ease-in-out infinite;
+}
+
+.loadingDots span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.loadingDots span:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes loadingDot {
+
+    0%,
+    80%,
+    100% {
+        transform: scale(0.6);
+        opacity: 0.4;
+    }
+
+    40% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.testButton {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.875rem 2rem;
+    background: linear-gradient(135deg, #00c8ff, #8b5cf6);
+    border: none;
+    border-radius: 14px;
+    color: white;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(0, 200, 255, 0.35);
+}
+
+.testButton:hover:not(:disabled) {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 30px rgba(0, 200, 255, 0.45);
+}
+
+.testButton:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+/* Pro Tip Note */
+.note {
+    position: relative;
+    z-index: 1;
+    margin-top: 1.25rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    font-size: 0.85rem;
+    color: var(--text-tertiary);
+    text-align: center;
+}
+
+.note strong {
+    color: #8b5cf6;
+}
+
+/* ===================================
+   Compact Mode (for ServerCard)
+   =================================== */
+
+.compactContainer {
+    display: inline-flex;
+}
+
+.compactButton {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.4rem 0.75rem;
+    background: linear-gradient(135deg, rgba(0, 200, 255, 0.1), rgba(139, 92, 246, 0.1));
+    border: 1px solid rgba(0, 200, 255, 0.3);
+    border-radius: 8px;
+    color: #00c8ff;
+    font-size: 0.75rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.compactButton:hover {
+    background: linear-gradient(135deg, rgba(0, 200, 255, 0.2), rgba(139, 92, 246, 0.2));
+    border-color: #00c8ff;
+    transform: scale(1.05);
+}
+
+.compactPinging {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.4rem 0.75rem;
+    background: linear-gradient(135deg, rgba(0, 200, 255, 0.15), rgba(139, 92, 246, 0.15));
+    border: 1px solid #00c8ff;
+    border-radius: 8px;
+    color: #00c8ff;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.compactResult {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.45rem 0.85rem;
+    background: linear-gradient(135deg, rgba(0, 200, 255, 0.1), rgba(139, 92, 246, 0.1));
+    border: 1px solid var(--ping-color, #00c8ff);
+    border-radius: 8px;
+    color: var(--ping-color, #00c8ff);
+    font-size: 0.8rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 0 10px rgba(0, 200, 255, 0.15);
+}
+
+.compactResult:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px var(--ping-color, rgba(0, 200, 255, 0.3));
+}
+
+.pingValue {
+    font-weight: 800;
+    font-family: 'JetBrains Mono', monospace;
+}
+
+.pingLabel {
+    font-size: 0.7rem;
+    opacity: 0.8;
+}
+
+/* ===================================
+   Responsive
+   =================================== */
+
+@media (max-width: 480px) {
+    .container {
+        padding: 1.25rem;
+        border-radius: 16px;
+    }
+
+    .uniqueBadge {
+        font-size: 0.6rem;
+        padding: 0.3rem 0.6rem;
+    }
+
+    .titleRow {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+    }
+
+    .latencyValue {
+        font-size: 3.5rem;
+    }
+
+    .latencyUnit {
+        font-size: 1.5rem;
+    }
+
+    .breakdown {
+        padding: 0.75rem;
+        flex-direction: column;
+    }
+
+    .breakdownDivider {
+        display: none;
+    }
+}

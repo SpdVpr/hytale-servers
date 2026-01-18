@@ -1,0 +1,49 @@
+# HytaleTop.fun - Hytale Servers List
+
+> The #1 Hytale servers list with real-time player counts, ping tests, and community reviews.
+
+## About
+
+HytaleTop.fun helps players discover the best Hytale multiplayer servers with:
+- Real-time server status and player counts
+- Exclusive ping test to measure latency before joining
+- Community reviews and ratings
+- Categorized browser (Survival, PvP, Minigames, Roleplay, Creative, Economy, Adventure, Skyblock, Modded)
+- Free server listing for owners
+
+## Main Pages
+
+- **Homepage**: https://www.hytaletop.fun/
+- **Server List**: https://www.hytaletop.fun/servers
+- **Top 100**: https://www.hytaletop.fun/top
+- **How to Join Guide**: https://www.hytaletop.fun/how-to-join
+- **Add Server**: https://www.hytaletop.fun/submit
+
+## Category Pages
+
+- /category/survival - Survival servers
+- /category/pvp - PvP servers
+- /category/minigames - Minigame servers
+- /category/roleplay - Roleplay servers
+- /category/creative - Creative servers
+- /category/economy - Economy servers
+- /category/adventure - Adventure servers
+- /category/skyblock - Skyblock servers
+- /category/modded - Modded servers
+
+## How to Join
+
+1. Launch Hytale
+2. Go to Multiplayer
+3. Click "Add Server" or "Direct Connect"
+4. Enter server IP (default port: 5520)
+5. Click Connect
+
+## For Server Owners
+
+Add your server for free at https://www.hytaletop.fun/submit
+
+## Contact
+
+Website: https://www.hytaletop.fun
+Full LLM Context: https://www.hytaletop.fun/llms-full.txt

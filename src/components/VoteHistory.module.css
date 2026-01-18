@@ -1,0 +1,106 @@
+.container {
+    background: var(--background-card);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-xl);
+    padding: var(--spacing-lg);
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-md);
+    padding-bottom: var(--spacing-md);
+    border-bottom: 1px solid var(--glass-border);
+}
+
+.header svg {
+    color: var(--accent-400);
+}
+
+.header h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-100);
+    flex: 1;
+}
+
+.totalBadge {
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 4px 8px;
+    background: rgba(249, 115, 22, 0.15);
+    color: var(--accent-400);
+    border-radius: var(--radius-full);
+}
+
+.loading {
+    text-align: center;
+    padding: var(--spacing-lg);
+    color: var(--text-500);
+}
+
+.empty {
+    text-align: center;
+    padding: var(--spacing-lg);
+    color: var(--text-400);
+}
+
+.voteList {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.voteItem {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-sm);
+    background: var(--glass-highlight);
+    border-radius: var(--radius-md);
+    transition: all var(--transition-fast);
+}
+
+.voteItem:hover {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.voterAvatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    background: var(--primary-600);
+    border-radius: 50%;
+    color: white;
+}
+
+.voteInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    flex: 1;
+    min-width: 0;
+}
+
+.voterName {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--text-100);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.voteTime {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 0.75rem;
+    color: var(--text-500);
+}

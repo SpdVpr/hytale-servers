@@ -1,0 +1,82 @@
+.page {
+    padding: var(--spacing-2xl) 0 var(--spacing-3xl);
+    min-height: 70vh;
+}
+
+.article {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.header {
+    margin-bottom: var(--spacing-2xl);
+    padding-bottom: var(--spacing-xl);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: var(--spacing-sm);
+}
+
+.lastUpdated {
+    color: var(--text-500);
+    font-size: 0.875rem;
+}
+
+.section {
+    margin-bottom: var(--spacing-2xl);
+}
+
+.section h2 {
+    font-size: 1.375rem;
+    font-weight: 700;
+    margin-bottom: var(--spacing-md);
+    color: var(--foreground);
+}
+
+.section h3 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-top: var(--spacing-lg);
+    margin-bottom: var(--spacing-sm);
+    color: var(--foreground);
+}
+
+.section p {
+    color: var(--text-400);
+    line-height: 1.8;
+    margin-bottom: var(--spacing-md);
+}
+
+.section ul {
+    list-style: none;
+    padding: 0;
+    margin: var(--spacing-md) 0;
+}
+
+.section li {
+    padding: var(--spacing-xs) 0;
+    padding-left: var(--spacing-lg);
+    position: relative;
+    color: var(--text-400);
+    line-height: 1.6;
+}
+
+.section li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--primary-500);
+    font-weight: bold;
+}
+
+.section a {
+    color: var(--primary-400);
+    text-decoration: none;
+}
+
+.section a:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,280 @@
+/* ServerCard.module.css - Hytale Adventure Theme */
+
+.card {
+    position: relative;
+    overflow: hidden;
+    /* Glass card styles from global are applied, this handles layout specific logic */
+    display: flex;
+    flex-direction: column;
+}
+
+.card.featured {
+    border-color: var(--primary-500);
+    box-shadow: 0 0 30px rgba(249, 115, 22, 0.15);
+}
+
+/* Rank Badge */
+.rankBadge {
+    position: absolute;
+    top: var(--spacing-md);
+    left: var(--spacing-md);
+    width: 36px;
+    height: 36px;
+    background: linear-gradient(135deg, var(--primary-500), var(--primary-600));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: white;
+    z-index: 10;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Header/Banner */
+.header {
+    position: relative;
+    height: 140px;
+    /* Slightly taller for dramatic effect */
+    overflow: hidden;
+    border-bottom: 1px solid var(--surface-200);
+}
+
+@media (prefers-color-scheme: dark) {
+    .header {
+        border-bottom-color: var(--surface-800);
+    }
+}
+
+.banner {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    transition: transform 0.5s ease;
+}
+
+.bannerImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.5s ease;
+}
+
+.bannerLink {
+    display: block;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.card:hover .bannerImage {
+    transform: scale(1.05);
+}
+
+.bannerPlaceholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--surface-100);
+}
+
+@media (prefers-color-scheme: dark) {
+    .bannerPlaceholder {
+        background: var(--surface-900);
+    }
+}
+
+.categoryEmoji {
+    font-size: 3rem;
+    opacity: 0.8;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+}
+
+.badges {
+    position: absolute;
+    bottom: var(--spacing-sm);
+    left: var(--spacing-sm);
+    display: flex;
+    gap: var(--spacing-xs);
+    z-index: 5;
+}
+
+/* Content */
+.content {
+    padding: var(--spacing-lg);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+    flex: 1;
+}
+
+.titleRow {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: var(--spacing-sm);
+    flex-wrap: wrap;
+}
+
+.title {
+    font-size: 1.25rem;
+    font-weight: 800;
+    /* Bolder titles */
+    color: var(--foreground);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+.title:hover {
+    color: var(--primary-500);
+}
+
+.categoryTag {
+    padding: 0.25rem 0.625rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    border-radius: 9999px;
+    white-space: nowrap;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.description {
+    font-size: 0.875rem;
+    color: var(--surface-500);
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    line-height: 1.6;
+}
+
+/* IP Box - updated to look like a stone tablet/paper */
+.ipBox {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-sm) var(--spacing-md);
+    background: var(--surface-200);
+    border-radius: var(--radius-md);
+    border: 1px solid transparent;
+}
+
+@media (prefers-color-scheme: dark) {
+    .ipBox {
+        background: rgba(0, 0, 0, 0.4);
+        border-color: var(--surface-800);
+    }
+}
+
+.ip {
+    flex: 1;
+    font-family: Consolas, Monaco, 'Andale Mono', monospace;
+    font-size: 0.875rem;
+    color: var(--primary-600);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-weight: 600;
+}
+
+@media (prefers-color-scheme: dark) {
+    .ip {
+        color: var(--primary-400);
+    }
+}
+
+.copyButton {
+    padding: 0.25rem 0.75rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--surface-500);
+    background: var(--surface-50);
+    border: 1px solid var(--surface-300);
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    text-transform: uppercase;
+}
+
+@media (prefers-color-scheme: dark) {
+    .copyButton {
+        background: var(--surface-800);
+        border-color: var(--surface-700);
+        color: var(--surface-400);
+    }
+}
+
+.copyButton:hover {
+    color: var(--primary-500);
+    border-color: var(--primary-500);
+}
+
+/* Stats */
+.stats {
+    display: flex;
+    gap: var(--spacing-lg);
+    border-top: 1px solid var(--surface-200);
+    padding-top: var(--spacing-md);
+}
+
+@media (prefers-color-scheme: dark) {
+    .stats {
+        border-top-color: var(--surface-800);
+    }
+}
+
+.stat {
+    display: flex;
+    align-items: center;
+    gap: 0.375rem;
+    color: var(--surface-400);
+}
+
+.statValue {
+    font-weight: 700;
+    color: var(--foreground);
+}
+
+.statLabel {
+    font-size: 0.75rem;
+    color: var(--surface-400);
+    text-transform: uppercase;
+}
+
+.discordStat {
+    color: #5865F2;
+    /* Discord Brand Color kept specifically */
+}
+
+.discordStat .statValue {
+    color: #5865F2;
+}
+
+.starIcon {
+    color: #fbbf24;
+    fill: #fbbf24;
+}
+
+/* Actions */
+.actions {
+    display: flex;
+    gap: var(--spacing-sm);
+    margin-top: auto;
+    /* Push to bottom */
+}
+
+.actions .btn {
+    flex: 1;
+}
+
+.actions .btn-ghost {
+    flex: 0;
+    padding: var(--spacing-sm);
+}

@@ -1,0 +1,220 @@
+.page {
+    padding: var(--spacing-xl) 0 var(--spacing-3xl);
+}
+
+/* Header */
+.header {
+    text-align: center;
+    margin-bottom: var(--spacing-xl);
+}
+
+.title {
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    margin-bottom: var(--spacing-sm);
+}
+
+.subtitle {
+    font-size: 1rem;
+    color: var(--text-400);
+}
+
+/* Toolbar */
+.toolbar {
+    display: flex;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+}
+
+.searchBox {
+    flex: 1;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.searchIcon {
+    position: absolute;
+    left: var(--spacing-md);
+    color: var(--text-500);
+    pointer-events: none;
+}
+
+.searchInput {
+    padding-left: calc(var(--spacing-md) * 2 + 20px);
+    padding-right: calc(var(--spacing-md) * 2 + 16px);
+}
+
+.clearSearch {
+    position: absolute;
+    right: var(--spacing-sm);
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--glass-highlight);
+    border: none;
+    border-radius: var(--radius-sm);
+    color: var(--text-400);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.clearSearch:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--text-200);
+}
+
+.filterToggle {
+    position: relative;
+    white-space: nowrap;
+}
+
+.filterBadge {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    width: 8px;
+    height: 8px;
+    background: var(--accent-500);
+    border-radius: 50%;
+}
+
+@media (min-width: 768px) {
+    .filterToggle {
+        display: none;
+    }
+}
+
+/* Filters Panel */
+.filtersPanel {
+    display: none;
+    gap: var(--spacing-md);
+    padding: var(--spacing-lg);
+    margin-bottom: var(--spacing-lg);
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-lg);
+    flex-wrap: wrap;
+}
+
+.filtersPanel.filtersOpen {
+    display: flex;
+}
+
+@media (min-width: 768px) {
+    .filtersPanel {
+        display: flex !important;
+    }
+}
+
+.filterGroup {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+    min-width: 160px;
+}
+
+.filterLabel {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--text-400);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.checkbox {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-sm) var(--spacing-md);
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    font-size: 0.9375rem;
+    color: var(--text-200);
+}
+
+.checkbox:hover {
+    border-color: var(--primary-500);
+}
+
+.checkbox input {
+    width: 18px;
+    height: 18px;
+    accent-color: var(--primary-500);
+}
+
+/* Results Info */
+.resultsInfo {
+    margin-bottom: var(--spacing-lg);
+    font-size: 0.875rem;
+    color: var(--text-400);
+}
+
+.resultsInfo strong {
+    color: var(--text-200);
+}
+
+/* Server Grid */
+.serverGrid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: var(--spacing-lg);
+}
+
+@media (min-width: 768px) {
+    .serverGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1200px) {
+    .serverGrid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* No Results */
+.noResults {
+    text-align: center;
+    padding: var(--spacing-3xl);
+}
+
+.noResults h3 {
+    font-size: 1.5rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.noResults p {
+    color: var(--text-400);
+    margin-bottom: var(--spacing-lg);
+}
+
+/* Loading State */
+.loadingState {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-3xl);
+    gap: var(--spacing-lg);
+    color: var(--text-400);
+}
+
+.spinner {
+    width: 48px;
+    height: 48px;
+    border: 3px solid var(--glass-border);
+    border-top-color: var(--primary-400);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}

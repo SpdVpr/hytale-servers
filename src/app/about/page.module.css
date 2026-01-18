@@ -1,0 +1,134 @@
+.page {
+    padding: var(--spacing-xl) 0 var(--spacing-3xl);
+}
+
+/* Hero */
+.hero {
+    text-align: center;
+    margin-bottom: var(--spacing-3xl);
+}
+
+.title {
+    font-size: clamp(2rem, 5vw, 3rem);
+    margin-bottom: var(--spacing-md);
+}
+
+.subtitle {
+    font-size: 1.125rem;
+    color: var(--text-300);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Sections */
+.section {
+    padding: var(--spacing-2xl);
+    margin-bottom: var(--spacing-2xl);
+}
+
+.sectionTitle {
+    font-size: 1.5rem;
+    margin-bottom: var(--spacing-lg);
+    text-align: center;
+}
+
+.text {
+    font-size: 1.0625rem;
+    line-height: 1.8;
+    color: var(--text-300);
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Features */
+.features {
+    margin-bottom: var(--spacing-2xl);
+}
+
+.featuresGrid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: var(--spacing-lg);
+}
+
+@media (min-width: 640px) {
+    .featuresGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .featuresGrid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.featureCard {
+    padding: var(--spacing-xl);
+    text-align: center;
+}
+
+.featureIcon {
+    color: var(--primary-400);
+    margin-bottom: var(--spacing-md);
+}
+
+.featureCard h3 {
+    font-size: 1.125rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.featureCard p {
+    font-size: 0.9375rem;
+    color: var(--text-400);
+    line-height: 1.6;
+}
+
+/* Stats */
+.statsGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-lg);
+}
+
+@media (min-width: 768px) {
+    .statsGrid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.stat {
+    text-align: center;
+}
+
+.statNumber {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--primary-400);
+    margin-bottom: var(--spacing-xs);
+}
+
+.statLabel {
+    font-size: 0.9375rem;
+    color: var(--text-400);
+}
+
+/* CTA */
+.cta {
+    text-align: center;
+    padding: var(--spacing-2xl);
+}
+
+.cta h2 {
+    font-size: 1.75rem;
+    margin-bottom: var(--spacing-xl);
+}
+
+.ctaButtons {
+    display: flex;
+    gap: var(--spacing-md);
+    justify-content: center;
+    flex-wrap: wrap;
+}

@@ -1,0 +1,120 @@
+.page {
+    padding: var(--spacing-2xl) 0 var(--spacing-3xl);
+    min-height: 70vh;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: var(--spacing-2xl);
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: var(--spacing-sm);
+}
+
+.header p {
+    color: var(--text-400);
+    font-size: 1.125rem;
+}
+
+.content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.contactOptions {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-3xl);
+}
+
+.contactCard {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: var(--radius-xl);
+    padding: var(--spacing-xl);
+    text-align: center;
+    transition: all var(--transition-fast);
+}
+
+.contactCard:hover {
+    border-color: rgba(245, 158, 11, 0.3);
+    transform: translateY(-4px);
+}
+
+.contactCard svg {
+    color: var(--primary-500);
+    margin-bottom: var(--spacing-md);
+}
+
+.contactCard h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: var(--spacing-xs);
+}
+
+.contactCard p {
+    color: var(--text-400);
+    font-size: 0.875rem;
+    margin-bottom: var(--spacing-md);
+}
+
+.contactLink {
+    color: var(--primary-400);
+    font-weight: 600;
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+.contactLink:hover {
+    color: var(--primary-300);
+    text-decoration: underline;
+}
+
+.infoSection {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: var(--radius-xl);
+    padding: var(--spacing-2xl);
+}
+
+.infoSection h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: var(--spacing-md);
+}
+
+.infoSection h3 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-top: var(--spacing-xl);
+    margin-bottom: var(--spacing-md);
+}
+
+.infoSection ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.infoSection li {
+    padding: var(--spacing-sm) 0;
+    padding-left: var(--spacing-lg);
+    position: relative;
+    color: var(--text-400);
+    line-height: 1.6;
+}
+
+.infoSection li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--primary-500);
+}
+
+.infoSection a {
+    color: var(--primary-400);
+}

@@ -1,0 +1,185 @@
+.page {
+    padding: var(--spacing-xl) 0 var(--spacing-3xl);
+}
+
+/* Header */
+.header {
+    text-align: center;
+    margin-bottom: var(--spacing-2xl);
+}
+
+.headerIcon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, rgba(234, 179, 8, 0.2), rgba(249, 115, 22, 0.2));
+    border-radius: 50%;
+    color: var(--accent-400);
+    margin-bottom: var(--spacing-lg);
+}
+
+.title {
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    margin-bottom: var(--spacing-sm);
+}
+
+.subtitle {
+    font-size: 1rem;
+    color: var(--text-400);
+}
+
+/* Podium */
+.podium {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-3xl);
+}
+
+@media (min-width: 768px) {
+    .podium {
+        grid-template-columns: 1fr 1.2fr 1fr;
+        align-items: end;
+    }
+
+    .podium .rank1 {
+        order: 2;
+    }
+
+    .podium .rank2 {
+        order: 1;
+    }
+
+    .podium .rank3 {
+        order: 3;
+    }
+}
+
+.podiumCard {
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px);
+    border: 2px solid var(--glass-border);
+    border-radius: var(--radius-xl);
+    padding: var(--spacing-xl);
+    text-align: center;
+    transition: all var(--transition-base);
+}
+
+.podiumCard.rank1 {
+    border-color: rgba(234, 179, 8, 0.5);
+    background: linear-gradient(to bottom, rgba(234, 179, 8, 0.1), var(--glass-bg));
+    box-shadow: 0 0 40px rgba(234, 179, 8, 0.15);
+}
+
+@media (min-width: 768px) {
+    .podiumCard.rank1 {
+        padding: var(--spacing-2xl);
+    }
+}
+
+.podiumCard.rank2 {
+    border-color: rgba(156, 163, 175, 0.5);
+    background: linear-gradient(to bottom, rgba(156, 163, 175, 0.1), var(--glass-bg));
+}
+
+.podiumCard.rank3 {
+    border-color: rgba(180, 83, 9, 0.5);
+    background: linear-gradient(to bottom, rgba(180, 83, 9, 0.1), var(--glass-bg));
+}
+
+.podiumRank {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-xs);
+    margin-bottom: var(--spacing-md);
+}
+
+.rank1 .podiumRank {
+    color: #eab308;
+}
+
+.rank2 .podiumRank {
+    color: #9ca3af;
+}
+
+.rank3 .podiumRank {
+    color: #b45309;
+}
+
+.podiumRank span {
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
+.podiumName {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: var(--spacing-sm);
+}
+
+.podiumVotes {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--accent-400);
+    margin-bottom: var(--spacing-xs);
+}
+
+.podiumPlayers {
+    font-size: 0.875rem;
+    color: var(--text-400);
+}
+
+/* Rankings Section */
+.ranking {
+    margin-top: var(--spacing-2xl);
+}
+
+.sectionTitle {
+    font-size: 1.5rem;
+    margin-bottom: var(--spacing-xl);
+    text-align: center;
+}
+
+/* Server Grid */
+.serverGrid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: var(--spacing-lg);
+}
+
+@media (min-width: 768px) {
+    .serverGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1200px) {
+    .serverGrid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Loading Spinner */
+.loadingSpinner {
+    display: flex;
+    justify-content: center;
+    padding: var(--spacing-3xl);
+}
+
+.spinner {
+    width: 48px;
+    height: 48px;
+    border: 3px solid var(--glass-border);
+    border-top-color: var(--primary-400);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}

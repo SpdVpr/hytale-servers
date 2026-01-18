@@ -1,0 +1,234 @@
+.card {
+    background: var(--background-card);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-lg);
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    border-color: var(--primary-500);
+    box-shadow: 0 4px 20px rgba(var(--primary-rgb), 0.1);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: var(--spacing-md);
+}
+
+.user {
+    display: flex;
+    gap: var(--spacing-sm);
+    align-items: center;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.avatarPlaceholder {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--gradient-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 700;
+}
+
+.userInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.username {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    font-weight: 600;
+    color: var(--text-100);
+}
+
+.verifiedBadge {
+    color: var(--success-400);
+}
+
+.playtime {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 0.75rem;
+    color: var(--text-400);
+}
+
+.rating {
+    display: flex;
+    gap: 2px;
+}
+
+.starFilled {
+    color: #fbbf24;
+    fill: #fbbf24;
+}
+
+.starEmpty {
+    color: var(--text-500);
+}
+
+.title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: var(--spacing-sm);
+    color: var(--text-100);
+}
+
+.content {
+    color: var(--text-300);
+    line-height: 1.6;
+    margin-bottom: var(--spacing-md);
+}
+
+.prosConsGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+}
+
+@media (max-width: 600px) {
+    .prosConsGrid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.pros,
+.cons {
+    padding: var(--spacing-md);
+    border-radius: var(--radius-md);
+}
+
+.pros {
+    background: rgba(34, 197, 94, 0.1);
+    border: 1px solid rgba(34, 197, 94, 0.2);
+}
+
+.cons {
+    background: rgba(239, 68, 68, 0.1);
+    border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+.pros h5,
+.cons h5 {
+    font-size: 0.875rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.pros ul,
+.cons ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.pros li,
+.cons li {
+    font-size: 0.875rem;
+    color: var(--text-300);
+    padding: 2px 0;
+}
+
+.pros li::before {
+    content: '+ ';
+    color: var(--success-400);
+}
+
+.cons li::before {
+    content: '- ';
+    color: var(--error-400);
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: var(--spacing-md);
+    border-top: 1px solid var(--glass-border);
+}
+
+.date {
+    font-size: 0.75rem;
+    color: var(--text-500);
+}
+
+.helpfulButtons {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.helpfulLabel {
+    font-size: 0.75rem;
+    color: var(--text-400);
+}
+
+.helpfulBtn {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 6px 12px;
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-md);
+    background: transparent;
+    color: var(--text-300);
+    font-size: 0.75rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.helpfulBtn:hover:not(.disabled) {
+    background: var(--glass-highlight);
+    border-color: var(--primary-500);
+    color: var(--primary-400);
+}
+
+.helpfulBtn.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.footerActions {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+}
+
+.deleteBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px;
+    border: 1px solid rgba(239, 68, 68, 0.3);
+    border-radius: var(--radius-md);
+    background: rgba(239, 68, 68, 0.1);
+    color: var(--error-400);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.deleteBtn:hover:not(:disabled) {
+    background: rgba(239, 68, 68, 0.2);
+    border-color: var(--error-400);
+}
+
+.deleteBtn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}

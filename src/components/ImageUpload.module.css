@@ -1,0 +1,199 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.label {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--text-200);
+}
+
+.dropzone {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 200px;
+    border: 2px dashed var(--glass-border);
+    border-radius: var(--radius-lg);
+    background: rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: all var(--transition-base);
+    overflow: hidden;
+}
+
+.dropzone:hover {
+    border-color: var(--primary-500);
+    background: rgba(14, 165, 233, 0.05);
+}
+
+.dropzone.dragOver {
+    border-color: var(--primary-400);
+    background: rgba(14, 165, 233, 0.1);
+    transform: scale(1.02);
+}
+
+.dropzone.hasPreview {
+    cursor: default;
+    border-style: solid;
+}
+
+.input {
+    display: none;
+}
+
+/* Placeholder State */
+.placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-md);
+    padding: var(--spacing-xl);
+    text-align: center;
+}
+
+.iconWrapper {
+    position: relative;
+    color: var(--text-400);
+}
+
+.uploadIcon {
+    position: absolute;
+    bottom: -4px;
+    right: -8px;
+    background: var(--bg-100);
+    border-radius: 50%;
+    padding: 2px;
+}
+
+.placeholderText {
+    font-size: 0.9375rem;
+    font-weight: 500;
+    color: var(--text-200);
+}
+
+.hint {
+    font-size: 0.8125rem;
+    color: var(--text-500);
+}
+
+/* Uploading State */
+.uploading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-md);
+    padding: var(--spacing-xl);
+    color: var(--primary-400);
+}
+
+.spinner {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.progressBar {
+    width: 200px;
+    height: 4px;
+    background: var(--glass-border);
+    border-radius: 9999px;
+    overflow: hidden;
+}
+
+.progressFill {
+    height: 100%;
+    background: var(--primary-500);
+    border-radius: 9999px;
+    transition: width 0.3s ease;
+}
+
+/* Preview State */
+.previewContainer {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 200px;
+}
+
+.preview {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.previewOverlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-md);
+    background: rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    transition: opacity var(--transition-base);
+}
+
+.previewContainer:hover .previewOverlay {
+    opacity: 1;
+}
+
+.removeBtn {
+    position: absolute;
+    top: var(--spacing-sm);
+    right: var(--spacing-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    background: rgba(239, 68, 68, 0.9);
+    border: none;
+    border-radius: var(--radius-md);
+    color: white;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.removeBtn:hover {
+    background: rgb(239, 68, 68);
+    transform: scale(1.1);
+}
+
+.changeBtn {
+    padding: var(--spacing-sm) var(--spacing-lg);
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: white;
+    background: var(--primary-600);
+    border: none;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.changeBtn:hover {
+    background: var(--primary-500);
+}
+
+/* Compression Badge */
+.compressionBadge {
+    position: absolute;
+    bottom: var(--spacing-sm);
+    left: var(--spacing-sm);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--success-400);
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: var(--radius-sm);
+}

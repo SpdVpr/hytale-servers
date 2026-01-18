@@ -1,0 +1,221 @@
+.page {
+    padding: 2rem 0 4rem;
+}
+
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+    font-size: 0.875rem;
+    color: var(--text-400);
+}
+
+.breadcrumb a {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    color: var(--text-400);
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    color: var(--primary-400);
+}
+
+.hero {
+    text-align: center;
+    padding: 3rem 2rem;
+    margin-bottom: 3rem;
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.1), rgba(6, 182, 212, 0.05));
+    border-radius: 1.5rem;
+}
+
+.heroBadge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: rgba(139, 92, 246, 0.2);
+    color: var(--primary-400);
+    border-radius: 2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.hero h1 {
+    font-size: clamp(1.75rem, 5vw, 2.5rem);
+    margin-bottom: 1rem;
+}
+
+.highlight {
+    background: linear-gradient(135deg, var(--primary-400), var(--accent-400));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+    color: var(--text-400);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.requirements,
+.stepsSection,
+.ctaSection,
+.faqSection {
+    margin-bottom: 3rem;
+}
+
+.requirements h2,
+.stepsSection h2,
+.ctaSection h2,
+.faqSection h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.requirementsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.requirementCard {
+    text-align: center;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 1rem;
+}
+
+.requirementCard svg {
+    color: var(--primary-400);
+    margin-bottom: 0.75rem;
+}
+
+.requirementCard h3 {
+    margin-bottom: 0.25rem;
+}
+
+.requirementCard p {
+    font-size: 0.875rem;
+    color: var(--text-400);
+}
+
+.requirementCard a {
+    color: var(--primary-400);
+}
+
+.stepsList {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.step {
+    display: flex;
+    gap: 1.5rem;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.stepNumber {
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--primary-500), var(--accent-500));
+    color: white;
+    font-size: 1.25rem;
+    font-weight: 700;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.stepContent h3 {
+    margin-bottom: 0.5rem;
+}
+
+.stepContent p {
+    color: var(--text-400);
+    margin-bottom: 0.5rem;
+}
+
+.codeBlock {
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 0.5rem;
+    margin: 1rem 0;
+}
+
+.codeBlock code {
+    color: var(--accent-400);
+    font-family: monospace;
+}
+
+.note {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--warning);
+    font-size: 0.875rem;
+}
+
+.successBox {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem;
+    background: rgba(34, 197, 94, 0.1);
+    border: 1px solid rgba(34, 197, 94, 0.3);
+    border-radius: 0.5rem;
+    color: #22c55e;
+    font-weight: 500;
+}
+
+.ctaSection {
+    text-align: center;
+    padding: 3rem;
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.15), rgba(6, 182, 212, 0.1));
+    border-radius: 1.5rem;
+}
+
+.ctaSection p {
+    color: var(--text-400);
+    margin-bottom: 1.5rem;
+}
+
+.ctaButtons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.faqSection {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.faqItem {
+    margin-bottom: 1rem;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 0.75rem;
+}
+
+.faqItem summary {
+    padding: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.faqItem p {
+    padding: 0 1rem 1rem;
+    color: var(--text-400);
+}
+
+.faqItem a {
+    color: var(--primary-400);
+}
