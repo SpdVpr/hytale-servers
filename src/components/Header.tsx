@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { useState } from 'react';
-import { Menu, X, Server, Plus, Trophy, Info, LogIn, LogOut, User } from 'lucide-react';
+import { Menu, X, Server, Plus, Trophy, Info, LogIn, LogOut, User, Package } from 'lucide-react';
 import { useAuth } from '@/context/AuthContext';
 import styles from './Header.module.css';
 
@@ -12,6 +12,7 @@ export default function Header() {
 
     const navigation = [
         { name: 'Servers', href: '/servers', icon: Server },
+        { name: 'Mods', href: '/mods', icon: Package },
         { name: 'Top 100', href: '/top', icon: Trophy },
         { name: 'Add Server', href: '/submit', icon: Plus },
         { name: 'About', href: '/about', icon: Info },

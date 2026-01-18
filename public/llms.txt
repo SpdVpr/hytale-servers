@@ -1,20 +1,22 @@
 # HytaleTop.fun - Hytale Servers List
 
-> The #1 Hytale servers list with real-time player counts, ping tests, and community reviews.
+> The #1 Hytale servers list with real-time player counts, ping tests, CurseForge mod integration, and community reviews.
 
 ## About
 
 HytaleTop.fun helps players discover the best Hytale multiplayer servers with:
 - Real-time server status and player counts
 - Exclusive ping test to measure latency before joining
+- **CurseForge mod integration** - browse and discover mods for Hytale
 - Community reviews and ratings
 - Categorized browser (Survival, PvP, Minigames, Roleplay, Creative, Economy, Adventure, Skyblock, Modded)
-- Free server listing for owners
+- Free server listing for owners with mod tagging
 
 ## Main Pages
 
 - **Homepage**: https://www.hytaletop.fun/
 - **Server List**: https://www.hytaletop.fun/servers
+- **Mods Browser**: https://www.hytaletop.fun/mods (CurseForge powered)
 - **Top 100**: https://www.hytaletop.fun/top
 - **How to Join Guide**: https://www.hytaletop.fun/how-to-join
 - **Add Server**: https://www.hytaletop.fun/submit
@@ -31,6 +33,14 @@ HytaleTop.fun helps players discover the best Hytale multiplayer servers with:
 - /category/skyblock - Skyblock servers
 - /category/modded - Modded servers
 
+## Mods Integration
+
+HytaleTop.fun features unique CurseForge integration:
+- Browse popular and recent Hytale mods
+- Search mods by name with instant results
+- Server owners can tag their servers with specific mods
+- Players can find servers running their favorite mods
+
 ## How to Join
 
 1. Launch Hytale
@@ -42,6 +52,7 @@ HytaleTop.fun helps players discover the best Hytale multiplayer servers with:
 ## For Server Owners
 
 Add your server for free at https://www.hytaletop.fun/submit
+Tag your server with mods from CurseForge for better discovery.
 
 ## Contact
 

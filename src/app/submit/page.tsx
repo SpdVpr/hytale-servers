@@ -2,11 +2,12 @@
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { Send, Server, Globe, Tag, FileText, Image, Disc, LogIn } from 'lucide-react';
-import { CATEGORY_INFO, ServerCategory, ServerSubmission } from '@/lib/types';
+import { Send, Server, Globe, Tag, FileText, Image, Disc, LogIn, Package } from 'lucide-react';
+import { CATEGORY_INFO, ServerCategory, ServerSubmission, ModReference } from '@/lib/types';
 import { useAuth } from '@/context/AuthContext';
 import ImageUpload from '@/components/ImageUpload';
 import GalleryUpload from '@/components/GalleryUpload';
+import ModAutocomplete from '@/components/ModAutocomplete';
 import styles from './page.module.css';
 
 const COUNTRIES = [
@@ -45,6 +46,7 @@ export default function SubmitPage() {
         banner: '',
         gallery: [],
         worldShareCode: '',
+        mods: [],
         ownerEmail: '',
     });
 
@@ -141,6 +143,7 @@ export default function SubmitPage() {
                 country: formData.country,
                 language: formData.language,
                 worldShareCode: formData.worldShareCode || null,
+                mods: formData.mods || [],
                 // Owner info from logged-in user
                 ownerId: user.uid,
                 ownerEmail: user.email,
@@ -452,6 +455,28 @@ export default function SubmitPage() {
                                 </select>
                             </div>
                         </div>
+                    </section>
+
+                    {/* Mods Section - CurseForge Integration */}
+                    <section className={`glass-card ${styles.section}`}>
+                        <h2 className={styles.sectionTitle}>
+                            <Package size={20} />
+                            Server Mods
+                            <span className={styles.sectionBadge}>CurseForge</span>
+                        </h2>
+
+                        <p className={styles.sectionDescription}>
+                            Add mods that your server uses. This helps players find servers with their favorite mods.
+                        </p>
+
+                        <ModAutocomplete
+                            selectedMods={formData.mods || []}
+                            onModsChange={(mods) => updateField('mods', mods)}
+                            maxMods={20}
+                            placeholder="Search for mods..."
+                            label=""
+                            helpText="Start typing to search CurseForge. Click suggestions to add mods."
+                        />
                     </section>
 
                     {/* Media Section */}

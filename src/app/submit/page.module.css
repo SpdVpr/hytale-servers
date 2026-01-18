@@ -47,6 +47,26 @@
     color: var(--primary-400);
 }
 
+.sectionBadge {
+    margin-left: auto;
+    padding: 0.25rem 0.6rem;
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.2), rgba(168, 85, 247, 0.15));
+    border: 1px solid rgba(139, 92, 246, 0.3);
+    border-radius: 6px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: #a855f7;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.sectionDescription {
+    font-size: 0.9rem;
+    color: var(--text-400);
+    margin-bottom: var(--spacing-lg);
+    line-height: 1.5;
+}
+
 /* Fields */
 .fieldGrid {
     display: flex;

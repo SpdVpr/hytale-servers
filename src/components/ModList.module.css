@@ -1,0 +1,270 @@
+/* ===================================
+   MOD LIST - Premium Styles
+   =================================== */
+
+.container {
+    margin-bottom: 1.5rem;
+}
+
+.container.compact {
+    margin-bottom: 1rem;
+}
+
+/* Header */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.75rem;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.titleIcon {
+    font-size: 1.2rem;
+}
+
+.count {
+    padding: 0.25rem 0.6rem;
+    background: linear-gradient(135deg, rgba(245, 158, 11, 0.15), rgba(251, 191, 36, 0.1));
+    border: 1px solid rgba(245, 158, 11, 0.25);
+    border-radius: 12px;
+    font-size: 0.8rem;
+    color: #fbbf24;
+    font-weight: 500;
+}
+
+/* Attribution */
+.attribution {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin-bottom: 0.75rem;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    opacity: 0.7;
+}
+
+/* Badge List */
+.badgeList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+/* Badge */
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.4rem 0.7rem;
+    background: rgba(30, 41, 59, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 8px;
+    font-size: 0.85rem;
+    color: var(--text-primary);
+    text-decoration: none;
+    transition: all 0.2s ease;
+    cursor: default;
+}
+
+a.badge {
+    cursor: pointer;
+}
+
+a.badge:hover {
+    background: rgba(245, 158, 11, 0.15);
+    border-color: rgba(245, 158, 11, 0.3);
+    transform: translateY(-1px);
+}
+
+.badgeIcon {
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    object-fit: cover;
+}
+
+.badgePlaceholder {
+    font-size: 0.9rem;
+}
+
+.badgeName {
+    max-width: 150px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.externalIcon {
+    font-size: 0.7rem;
+    opacity: 0.5;
+    margin-left: 0.1rem;
+}
+
+/* Card List */
+.cardList {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+/* Card */
+.card {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding: 0.85rem;
+    background: rgba(30, 41, 59, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 12px;
+    transition: all 0.2s ease;
+}
+
+.card:hover {
+    background: rgba(30, 41, 59, 0.8);
+    border-color: rgba(245, 158, 11, 0.2);
+}
+
+.cardThumbnail {
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cardImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cardPlaceholder {
+    font-size: 1.5rem;
+}
+
+.cardContent {
+    flex: 1;
+    min-width: 0;
+}
+
+.cardHeader {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.25rem;
+}
+
+.cardName {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.serverPackTag {
+    padding: 0.15rem 0.4rem;
+    background: linear-gradient(135deg, #8b5cf6, #a855f7);
+    border-radius: 4px;
+    font-size: 0.65rem;
+    font-weight: 600;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.cardSummary {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    line-height: 1.4;
+    margin: 0 0 0.4rem 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.cardMeta {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+.cardDownloads {
+    color: #22c55e;
+}
+
+.cardAuthors,
+.cardCategories {
+    opacity: 0.8;
+}
+
+.cardLink {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background: rgba(245, 158, 11, 0.1);
+    border-radius: 8px;
+    color: #f59e0b;
+    transition: all 0.2s ease;
+}
+
+.cardLink:hover {
+    background: rgba(245, 158, 11, 0.2);
+    transform: scale(1.05);
+}
+
+/* Show More Button */
+.showMore {
+    display: block;
+    width: 100%;
+    margin-top: 0.75rem;
+    padding: 0.6rem 1rem;
+    background: transparent;
+    border: 1px dashed rgba(255, 255, 255, 0.15);
+    border-radius: 8px;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.showMore:hover {
+    background: rgba(245, 158, 11, 0.05);
+    border-color: rgba(245, 158, 11, 0.3);
+    color: #f59e0b;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 640px) {
+    .cardMeta {
+        gap: 0.5rem;
+    }
+
+    .cardSummary {
+        -webkit-line-clamp: 1;
+    }
+
+    .badgeName {
+        max-width: 100px;
+    }
+}

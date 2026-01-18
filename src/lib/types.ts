@@ -2,6 +2,22 @@
 // HYTALE SERVERS - Type Definitions
 // ===================================
 
+// CurseForge Mod Reference (stored in Firestore)
+export interface ModReference {
+  id: number;
+  name: string;
+  slug: string;
+  summary: string;
+  thumbnailUrl: string | null;
+  downloadCount: number;
+  rating: number;
+  authors: string[];
+  categories: string[];
+  websiteUrl: string | null;
+  latestVersion?: string;
+  isServerPack?: boolean;
+}
+
 export interface Server {
   id: string;
   slug?: string;
@@ -50,6 +66,9 @@ export interface Server {
   // Reviews
   averageRating?: number;
   totalReviews?: number;
+
+  // CurseForge Mods Integration
+  mods?: ModReference[];
 
   // Ownership
   ownerId?: string; // Firebase user ID
@@ -108,6 +127,7 @@ export interface ServerSubmission {
   banner?: string;
   gallery?: string[];
   worldShareCode?: string;
+  mods?: ModReference[]; // CurseForge mods
   ownerEmail: string;
 }
 
