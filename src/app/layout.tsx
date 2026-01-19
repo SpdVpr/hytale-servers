@@ -4,6 +4,7 @@ import Image from "next/image";
 import Script from "next/script";
 import "@/styles/globals.css";
 import Header from "@/components/Header";
+import PromoBanner from "@/components/PromoBanner";
 import Footer from "@/components/Footer";
 import { AuthProvider } from "@/context/AuthContext";
 
@@ -150,6 +151,7 @@ export default function RootLayout({
             <div className="firefly" />
           </div>
           <Header />
+          <PromoBanner />
           <main style={{ flex: 1 }}>
             {children}
           </main>
